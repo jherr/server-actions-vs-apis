@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { bookmarkSlug, getSelectedSlugs } from "@/remote-api";
 
 export async function POST(
-  req: NextRequest,
+  _req: NextRequest,
   { params: { slug } }: { params: { slug: string } }
 ) {
   const session = cookies().get("__session")?.value;

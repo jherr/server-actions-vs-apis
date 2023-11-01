@@ -53,7 +53,7 @@ export default async function Home() {
                     "use server";
 
                     await sql`INSERT INTO bookmarks (userId, slug)
-                  VALUES(${userId},${slug})
+                  VALUES(${userId}, ${slug})
                   ON CONFLICT (userId, slug)
                   DO UPDATE SET active = NOT bookmarks.active`;
 
