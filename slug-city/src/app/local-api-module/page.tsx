@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { auth } from "@clerk/nextjs";
 import Image from "next/image";
 import { revalidatePath } from "next/cache";
@@ -59,3 +60,7 @@ export default async function Home() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Server Actions - Local API Module",
+};

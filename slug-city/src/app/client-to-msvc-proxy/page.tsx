@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { cookies } from "next/headers";
 
 import { getSelectedSlugs } from "@/remote-api";
@@ -18,3 +19,7 @@ export default async function Home() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Client Components - Microservice Proxy Through Local API",
+};
