@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { cookies } from "next/headers";
 
 import SlugsGrid from "./SlugsGrid";
@@ -26,3 +27,7 @@ export default async function Home() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Client Components - Local API Module",
+};

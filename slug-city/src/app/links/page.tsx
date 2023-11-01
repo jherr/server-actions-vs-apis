@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export default function Links() {
@@ -33,3 +34,7 @@ export default function Links() {
     </ul>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Links",
+};
