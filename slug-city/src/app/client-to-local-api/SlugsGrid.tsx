@@ -1,5 +1,4 @@
 "use client";
-import { useSession } from "@clerk/nextjs";
 import { useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
@@ -15,15 +14,11 @@ export default function SlugsGrid({
 
   const bookmarkedSlugs = updatedBookmarks || initialBookmarkedSlugs;
 
-  const session = useSession();
-
   const toggleBookmark = async (slug: string) => {
-    const token = await session.session?.getToken();
     const req = await fetch(`/client-to-local-api/api/${slug}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({}),
     });
